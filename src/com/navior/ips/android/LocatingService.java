@@ -35,6 +35,11 @@ import java.util.Set;
 
 public class LocatingService extends Service {
 
+  /**
+   * State representations.
+   * After this service is started, some fields of it may not have been initialized. So it may be not ready to start locating.
+   * Outside caller can get the state representation by calling getServiceState() through binder.
+   */
   public enum LocatingServiceState {
     NOT_READY_TO_LOCATE,
     READY_TO_LOCATE,
@@ -51,18 +56,11 @@ public class LocatingService extends Service {
       if( action != null ) {
         if( action.equals( BluetoothAdapter.ACTION_STATE_CHANGED ) ) {
           int state = intent.getIntExtra( BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR );
-          if( state == BluetoothAdapter.STATE_ON ) {
-            // todo
-          }
-          else if( state == BluetoothAdapter.STATE_OFF ) {
-            // TODO notify the caller to turn on Bluetooth
-
-          }
-          else if( state == BluetoothAdapter.STATE_TURNING_ON ) {
-
-          }
-          else if( state == BluetoothAdapter.STATE_TURNING_OFF ) {
-
+          if( state == BluetoothAdapter.STATE_OFF ) {
+            Message msg = new Message();
+            msg.what = LocationMessage.TO_TURN_ON_BLUETOOTH;
+            msg.setTarget( outsideHandler );
+            msg.sendToTarget();
           }
         }
       }
@@ -87,6 +85,8 @@ public class LocatingService extends Service {
   @Override
   public int onStartCommand(Intent intent, int flags, int startId) {
     locator = new Locator();
+    IntentFilter filter = new IntentFilter( BluetoothAdapter.ACTION_STATE_CHANGED );
+    registerReceiver( mReceiver, filter );
     return super.onStartCommand(intent, flags, startId);
   }
 
@@ -105,6 +105,7 @@ public class LocatingService extends Service {
    */
   @Override
   public void onDestroy() {
+    locator = null;
     unregisterReceiver( mReceiver );
     super.onDestroy();
   }
@@ -118,9 +119,8 @@ public class LocatingService extends Service {
     if(outsideHandler == null) {
       return;
     }
-    // TODO set up new thread to do this?
     Message msg = new Message();
-    msg.what = MessageFormat.UNKNOWN_POS;
+    msg.what = LocationMessage.UNKNOWN_POS;
     msg.obj = posDeviceName;
     msg.setTarget(outsideHandler);
     msg.sendToTarget();
@@ -134,11 +134,21 @@ public class LocatingService extends Service {
     if( outsideHandler == null ) {
       return;
     }
-    Message msg2Outside = new Message();
-    msg2Outside.what = 0;  // todo message format
-    msg2Outside.setTarget(outsideHandler);
-    msg2Outside.obj = location;
-    msg2Outside.sendToTarget();
+    Message msg = new Message();
+    msg.what = LocationMessage.NEW_LOCATION;
+    msg.setTarget(outsideHandler);
+    msg.obj = location;
+    msg.sendToTarget();
+  }
+
+  private void notifyFailToStartLocating() {
+    if( outsideHandler == null ) {
+      return;
+    }
+    Message msg = new Message();
+    msg.what = LocationMessage.FAIL_START_LOCATING;
+    msg.setTarget(outsideHandler);
+    msg.sendToTarget();
   }
 
   public class LocatingBinder extends Binder {
@@ -159,8 +169,6 @@ public class LocatingService extends Service {
         return false;
       }
       outsideHandler = handler;
-      IntentFilter filter = new IntentFilter( BluetoothAdapter.ACTION_STATE_CHANGED );
-      registerReceiver( mReceiver, filter );
       locator.startLocating();
       return true;
     }
@@ -202,7 +210,6 @@ public class LocatingService extends Service {
       }
       locator.stopLocating();
       outsideHandler = null;
-      locator = null;
     }
 
     public LocatingServiceState getServiceState() {
@@ -237,6 +244,9 @@ public class LocatingService extends Service {
           if(location != null) {
             deliverCurrentLocation( location );
           }
+          else {
+            System.out.println("fail locate");
+          }
         }
       }
     };
@@ -244,6 +254,11 @@ public class LocatingService extends Service {
     private BluetoothAdapter mBluetoothAdapter;
     private BluetoothGatt mBluetoothGatt;
     private BluetoothGattCallback mCallback = new BluetoothGattCallback() {
+
+      @Override
+      public void onAppRegistered(int i) {
+        state = LocatingServiceState.READY_TO_LOCATE;
+      }
 
       @Override
       public void onScanResult( BluetoothDevice bluetoothDevice, int rssi, byte[] bytes ) {
@@ -255,11 +270,6 @@ public class LocatingService extends Service {
         RssiRecord record = new RssiRecord(bluetoothDevice.getName(), rssi);
         tempStorage.addNewRecord( record );
       }
-
-      @Override
-      public void onConnectionStateChange(BluetoothDevice bluetoothDevice, int i, int i2) {
-        // TODO notify user
-      }
     };
     private BluetoothProfile.ServiceListener mServiceListener = new BluetoothProfile.ServiceListener() {
       @Override
@@ -268,7 +278,6 @@ public class LocatingService extends Service {
         if( profile == BluetoothGattAdapter.GATT ) {
           mBluetoothGatt = ( BluetoothGatt )bluetoothProfile;
           mBluetoothGatt.registerApp( mCallback );
-          state = LocatingServiceState.READY_TO_LOCATE;
           System.out.println( "bluetooth connected" );
         }
       }
@@ -282,7 +291,7 @@ public class LocatingService extends Service {
       }
     };
 
-    Locator() {
+    private Locator() {
       posInfoMap = new HashMap<String, POS>();
       location = null;
       locationCalculator = new CalculatorWithCOM();
@@ -296,17 +305,18 @@ public class LocatingService extends Service {
       BluetoothGattAdapter.getProfileProxy(LocatingService.this, mServiceListener, BluetoothGattAdapter.GATT);
     }
 
-    void startLocating() {
+    private void startLocating() {
       if( !mBluetoothGatt.startScan() ) {
-        // TODO tell caller error in start scanning
+        notifyFailToStartLocating();
       }
       else {
         clock = new Clock();
         clock.start();
+        state = LocatingServiceState.LOCATING;
       }
     }
 
-    void stopLocating() {
+    private void stopLocating() {
       clock.interrupt();
       mBluetoothGatt.stopScan();
       clock = null;

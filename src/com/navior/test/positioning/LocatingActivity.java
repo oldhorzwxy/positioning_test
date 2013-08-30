@@ -30,6 +30,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 import com.navior.ips.android.LocatingService;
+import com.navior.ips.android.LocationMessage;
+import com.navior.ips.model.Location;
+import com.navior.ips.model.POS;
 import com.samsung.android.sdk.bt.gatt.BluetoothGatt;
 import com.samsung.android.sdk.bt.gatt.BluetoothGattAdapter;
 import com.samsung.android.sdk.bt.gatt.BluetoothGattCallback;
@@ -43,6 +46,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 public class LocatingActivity extends Activity {
+
+  public static final int FAKE_FLOOR_ONE = 111;
+  public static final int FAKE_FLOOR_TWO = 222;
 
   private HashMap<String, Star> starMap;
   private MapGraph mapGraph;
@@ -72,7 +78,31 @@ public class LocatingActivity extends Activity {
     handler = new Handler() {
       @Override
       public void handleMessage(Message msg) {
-
+        int msgType = msg.what;
+        switch (msgType) {
+          case LocationMessage.UNKNOWN_POS:
+            String name = (String)msg.obj;
+            if( starMap.containsKey( name ) ) {
+              Star star = starMap.get( name );
+              POS pos = new POS();
+              pos.setFloorId( FAKE_FLOOR_ONE );
+              pos.setX( star.getX() );
+              pos.setY( star.getY() );
+              binder.setPOSInfo( name, pos );
+            }
+            else {
+              System.out.println( "lack star:" + name );
+            }
+            break;
+          case LocationMessage.NEW_LOCATION:
+            //todo draw points
+            Location location = (Location)msg.obj;
+            System.out.println( "new location (" + location.getX() + "," + location.getY() + ")/" + location.getFloorId() );
+            break;
+          default:
+            System.out.println( "unknown message" );
+            break;
+        }
       }
     };
 
@@ -99,6 +129,13 @@ public class LocatingActivity extends Activity {
 
         mapGraph.setPointMap( null );
         mapGraph.postInvalidate();
+      }
+    });
+    Button stopLocating = (Button) findViewById(R.id.stop_locating);
+    stopLocating.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        binder.stopLocating();
       }
     });
     Button quit = (Button)findViewById(R.id.quit);
