@@ -98,6 +98,18 @@ public class LocatingActivity extends Activity {
             //todo draw points
             Location location = (Location)msg.obj;
             System.out.println( "new location (" + location.getX() + "," + location.getY() + ")/" + location.getFloorId() );
+
+            HashMap<String, DrawPoint> resultMap = binder.getStarMap();
+
+            DrawPoint locationPoint = new DrawPoint();
+            locationPoint.x = (int)location.getX();
+            locationPoint.y = (int)location.getY();
+            locationPoint.label = "result";
+            locationPoint.color = Color.RED;
+
+            resultMap.put( "result", locationPoint );
+            mapGraph.setPointMap( resultMap );
+            mapGraph.postInvalidate();
             break;
           default:
             System.out.println( "unknown message" );

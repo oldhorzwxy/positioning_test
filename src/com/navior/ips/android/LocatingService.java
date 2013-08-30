@@ -26,6 +26,7 @@ import android.os.IBinder;
 import android.os.Message;
 import com.navior.ips.model.Location;
 import com.navior.ips.model.POS;
+import com.navior.test.positioning.DrawPoint;
 import com.samsung.android.sdk.bt.gatt.*;
 
 import java.util.ArrayList;
@@ -132,6 +133,7 @@ public class LocatingService extends Service {
    */
   private void deliverCurrentLocation( Location location ) {
     if( outsideHandler == null ) {
+      System.out.println( "no handler" );
       return;
     }
     Message msg = new Message();
@@ -215,6 +217,16 @@ public class LocatingService extends Service {
     public LocatingServiceState getServiceState() {
       return state;
     }
+    //-------------------------
+    // code for debug
+    //-------------------------
+    // todo delete the code
+    public HashMap<String, DrawPoint> getStarMap() {
+      return locator.starMap;
+    }
+    //-------------------------
+    // end of code for debug
+    //-------------------------
   }
 
   /**
@@ -222,6 +234,15 @@ public class LocatingService extends Service {
    * //todo
    */
   private class Locator {
+
+    //-------------------------
+    // code for debug
+    //-------------------------
+    // todo delete the code
+    HashMap<String, DrawPoint> starMap;
+    //-------------------------
+    // end of code for debug
+    //-------------------------
 
     private final static long CLOCK_PERIOD = 2000;
     private final static int SCANNING_PERIOD_ENDS = 357;
@@ -236,13 +257,24 @@ public class LocatingService extends Service {
 
       @Override
       public void handleMessage(Message msg) {
+        System.out.println( "receive message" );
         if (msg.what == SCANNING_PERIOD_ENDS) {
+          System.out.println( "ringing.." + System.currentTimeMillis() );
           tempStorage.switchList();
           ArrayList<RssiRecord> records = tempStorage.getLastRecordList();
           Set<RssiRecord> rssiAverageSet = getAverage( records );
           location = locationCalculator.calculateLocation(rssiAverageSet, posInfoMap);
           if(location != null) {
             deliverCurrentLocation( location );
+
+            //-------------------------
+            // code for debug
+            //-------------------------
+            // todo delete the code
+            starMap = ((CalculatorWithCOM)locationCalculator).getStarMap();
+            //-------------------------
+            // end of code for debug
+            //-------------------------
           }
           else {
             System.out.println("fail locate");
@@ -295,7 +327,6 @@ public class LocatingService extends Service {
       posInfoMap = new HashMap<String, POS>();
       location = null;
       locationCalculator = new CalculatorWithCOM();
-      handler = new Handler();
       tempStorage = new RssiStorage();
 
       mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -383,10 +414,12 @@ public class LocatingService extends Service {
         try {
           while (true) {
             Thread.sleep(CLOCK_PERIOD);
+            System.out.println("clock wakes up");
             Message msg = new Message();
             msg.what = SCANNING_PERIOD_ENDS;
             msg.setTarget(handler);
             msg.sendToTarget();
+            System.out.println("sent message");
           }
         } catch (InterruptedException e) {
           // It's normal. Nothing to do.

@@ -90,6 +90,12 @@ public class MapGraph extends View {
         canvas.drawCircle(PADDING_X + p.x * BLOCK_SIZE / 100, PADDING_Y + p.y * BLOCK_SIZE / 100, 3, paint);
         canvas.drawText(p.label, PADDING_X + p.x * BLOCK_SIZE / 100 + 20, PADDING_Y + p.y * BLOCK_SIZE / 100 + 20, paint);
       }
+      else if(name.equals("result")) {
+        Paint paint = new Paint();
+        paint.setColor(p.color);
+        canvas.drawCircle(PADDING_X + p.x * BLOCK_SIZE / 100, PADDING_Y + p.y * BLOCK_SIZE / 100, 3, paint);
+        canvas.drawText(p.label, PADDING_X + p.x * BLOCK_SIZE / 100 + 20, PADDING_Y + p.y * BLOCK_SIZE / 100 + 20, paint);
+      }
       else {
         Paint paint = new Paint();
         canvas.drawCircle(PADDING_X + p.x * BLOCK_SIZE / 100, PADDING_Y + p.y * BLOCK_SIZE / 100, 3, paint);

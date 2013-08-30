@@ -12,8 +12,10 @@
  */
 package com.navior.ips.android;
 
+import android.graphics.Color;
 import com.navior.ips.model.Location;
 import com.navior.ips.model.POS;
+import com.navior.test.positioning.DrawPoint;
 
 import java.util.*;
 
@@ -21,8 +23,28 @@ public class CalculatorWithCOM implements LocationCalculator {
 
   private final static int LEAST_STAR_AMOUNT = 4;
 
+
+  //-------------------------
+  // code for debug
+  //-------------------------
+  // todo
+  private HashMap<String, DrawPoint> starMap;
+  //-------------------------
+  // end of code for debug
+  //-------------------------
+
   @Override
   public Location calculateLocation(Set<RssiRecord> recordSet, HashMap< String, POS > posInfoMap) {
+    //-------------------------
+    // code for debug
+    //-------------------------
+    // todo
+    starMap = new HashMap<String, DrawPoint>();
+    //-------------------------
+    // end of code for debug
+    //-------------------------
+
+
     TreeSet<RssiRecord> sortedRecordSet = new TreeSet<RssiRecord>( new RssiComparator() );
     sortedRecordSet.addAll( recordSet );
     RssiRecord strongestStarRecord = sortedRecordSet.pollLast();
@@ -46,6 +68,23 @@ public class CalculatorWithCOM implements LocationCalculator {
       else if( addedStar.getFloorId() == floorId ) {
         cooperatedStars.add( addedRecord );
         distanceList.add(rssi2Distance(addedRecord.getRssi()));
+
+        //-------------------------
+        // code for debug
+        //-------------------------
+        // todo
+        DrawPoint point = new DrawPoint();
+        point.color = Color.CYAN;
+        point.x = (int)addedStar.getX();
+        point.y = (int)addedStar.getY();
+        point.rssi = addedRecord.getRssi();
+        point.label = name;
+        point.r = (int)rssi2Distance(addedRecord.getRssi());
+        starMap.put(name, point);
+
+        //-------------------------
+        // end of code for debug
+        //-------------------------
       }
       addedRecord = sortedRecordSet.pollLast();
     }
@@ -70,9 +109,40 @@ public class CalculatorWithCOM implements LocationCalculator {
     }
     comX /= divider;
     comY /= divider;
+    //-------------------------
+    // code for debug
+    //-------------------------
+    // todo
+    DrawPoint com = new DrawPoint();
+    com.x = (int)comX;
+    com.y = (int)comY;
+    com.rssi = -10;
+    com.label = "com";
+    com.r = 100;
+    com.color = Color.GREEN;
+    starMap.put("gravity", com);
+    //-------------------------
+    // end of code for debug
+    //-------------------------
     float sR = rssi2Distance(strongestStarRecord.getRssi());
     float sX = strongestStar.getX();
     float sY = strongestStar.getY();
+
+    //-------------------------
+    // code for debug
+    //-------------------------
+    // todo
+    DrawPoint s = new DrawPoint();
+    s.x = (int)sX;
+    s.y = (int)sY;
+    s.rssi = strongestStarRecord.getRssi();
+    s.label = strongestStarRecord.getStarName();
+    s.r = (int)sR;
+    s.color = Color.RED;
+    starMap.put(strongestStarRecord.getStarName(), s);
+    //-------------------------
+    // end of code for debug
+    //-------------------------
     float d = (float)Math.sqrt( (comX - sX) * (comX - sX) + (comY - sY) * (comY - sY) );
     float resultX = (comX - sX) * sR / d + sX;
     float resultY = (comY - sY) * sR / d + sY;
@@ -107,4 +177,17 @@ public class CalculatorWithCOM implements LocationCalculator {
   private static float rssi2Distance( int rssi ) {
     return 100 * (float)Math.pow(2, (-55 - rssi) / 5.0);
   }
+
+  //-------------------------
+  // code for debug
+  //-------------------------
+  // todo
+
+  public HashMap<String, DrawPoint> getStarMap() {
+    return starMap;
+  }
+
+  //-------------------------
+  // end of code for debug
+  //-------------------------
 }
