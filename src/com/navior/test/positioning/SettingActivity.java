@@ -22,7 +22,7 @@ public class SettingActivity extends Activity {
 		setContentView(R.layout.activity_setting);
 
     layoutMap = new HashMap<String, SettingLine>();
-    for( int i = 21; i < 44; i++ ) {
+    for( int i = 21; i < 47; i++ ) {
       SettingLine line = new SettingLine( this, "876543" + i );
       ((ViewGroup) findViewById( R.id.list ) ).addView( line );
       layoutMap.put("876543"+ i, line);
