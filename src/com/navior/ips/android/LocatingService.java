@@ -58,6 +58,7 @@ public class LocatingService extends Service {
         if( action.equals( BluetoothAdapter.ACTION_STATE_CHANGED ) ) {
           int state = intent.getIntExtra( BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR );
           if( state == BluetoothAdapter.STATE_OFF ) {
+            System.out.println(Thread.currentThread().getId() + "  broadcast receiver");
             Message msg = new Message();
             msg.what = LocationMessage.TO_TURN_ON_BLUETOOTH;
             msg.setTarget( outsideHandler );
@@ -326,7 +327,7 @@ public class LocatingService extends Service {
     private Locator() {
       posInfoMap = new HashMap<String, POS>();
       location = null;
-      locationCalculator = new CalculatorWithCOM();
+      locationCalculator = new CalculatorWithoutDist();
       tempStorage = new RssiStorage();
 
       mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -354,7 +355,7 @@ public class LocatingService extends Service {
     }
 
     private Location getLocation() {
-      return null;
+      return location;
     }
 
     private void addNewPos(String name, POS pos) {

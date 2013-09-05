@@ -59,21 +59,20 @@ public class MapGraph extends View {
     }
 
     // draw walls
-    canvas.drawLine( PADDING_X, PADDING_Y, PADDING_X + 365, PADDING_Y, painter ); // 1
-    canvas.drawLine( PADDING_X, PADDING_Y, PADDING_X, PADDING_Y + 740, painter ); // 2
-    canvas.drawLine( PADDING_X + 365, PADDING_Y, PADDING_X + 365, PADDING_Y + 505, painter ); // 3
-    canvas.drawLine( PADDING_X, PADDING_Y + 740, PADDING_X + 860, PADDING_Y + 740, painter ); // 4
-    canvas.drawLine( PADDING_X + 365, PADDING_Y + 505, PADDING_X + 620, PADDING_Y + 505, painter ); // 5
-    canvas.drawLine( PADDING_X + 365, PADDING_Y + 390, PADDING_X + 585, PADDING_Y + 390, painter ); // 6
-    canvas.drawLine( PADDING_X + 585, PADDING_Y + 390, PADDING_X + 585, PADDING_Y + 505, painter ); // 7
-    canvas.drawLine( PADDING_X + 515, PADDING_Y + 605, PADDING_X + 685, PADDING_Y + 605, painter ); // 8
-    canvas.drawLine( PADDING_X + 515, PADDING_Y + 605, PADDING_X + 515, PADDING_Y + 740, painter ); // 9
-    canvas.drawLine( PADDING_X + 685, PADDING_Y + 740, PADDING_X + 685, PADDING_Y + 190, painter ); // 10
-    canvas.drawLine( PADDING_X + 860, PADDING_Y + 740, PADDING_X + 860, PADDING_Y + 190, painter ); // 11
-    canvas.drawLine( PADDING_X + 685, PADDING_Y + 490, PADDING_X + 860, PADDING_Y + 490, painter ); // 12
-    canvas.drawLine( PADDING_X + 685, PADDING_Y + 365, PADDING_X + 860, PADDING_Y + 365, painter ); // 13
-    canvas.drawLine( PADDING_X + 620, PADDING_Y + 190, PADDING_X + 860, PADDING_Y + 190, painter ); // 14
-    canvas.drawLine( PADDING_X + 620, PADDING_Y + 505, PADDING_X + 620, PADDING_Y + 190, painter ); // 15
+    canvas.drawLine( PADDING_X, PADDING_Y, PADDING_X + 390, PADDING_Y, painter ); // 1
+    canvas.drawLine( PADDING_X, PADDING_Y, PADDING_X, PADDING_Y + 780, painter ); // 2
+    canvas.drawLine( PADDING_X + 390, PADDING_Y, PADDING_X + 390, PADDING_Y + 530, painter ); // 3
+    canvas.drawLine( PADDING_X, PADDING_Y + 780, PADDING_X + 780, PADDING_Y + 780, painter ); // 4
+    canvas.drawLine( PADDING_X + 390, PADDING_Y + 530, PADDING_X + 645, PADDING_Y + 530, painter ); // 5
+    canvas.drawLine( PADDING_X + 390, PADDING_Y + 390, PADDING_X + 610, PADDING_Y + 390, painter ); // 6
+    canvas.drawLine( PADDING_X + 610, PADDING_Y + 390, PADDING_X + 610, PADDING_Y + 530, painter ); // 7
+    canvas.drawLine( PADDING_X + 527, PADDING_Y + 610, PADDING_X + 700, PADDING_Y + 610, painter ); // 8
+    canvas.drawLine( PADDING_X + 527, PADDING_Y + 610, PADDING_X + 527, PADDING_Y + 780, painter ); // 9
+    canvas.drawLine( PADDING_X + 700, PADDING_Y + 780, PADDING_X + 700, PADDING_Y + 390, painter ); // 10
+    canvas.drawLine( PADDING_X + 780, PADDING_Y + 390, PADDING_X + 780, PADDING_Y + 780, painter ); // 11
+    canvas.drawLine( PADDING_X + 700, PADDING_Y + 520, PADDING_X + 780, PADDING_Y + 520, painter ); // 12
+    canvas.drawLine( PADDING_X + 645, PADDING_Y + 390, PADDING_X + 780, PADDING_Y + 390, painter ); // 13
+    canvas.drawLine( PADDING_X + 645, PADDING_Y + 530, PADDING_X + 645, PADDING_Y + 390, painter ); // 15
 
     if(pointMap == null) {
       return;

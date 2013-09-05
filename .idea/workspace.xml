@@ -82,43 +82,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LocatingActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/LocatingActivity.java">
+      <file leaf-file-name="CalculatorWithCOM.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithCOM.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="37" selection-start="3375" selection-end="3375" vertical-scroll-proportion="0.0" vertical-offset="983" max-vertical-offset="3680">
-              <folding>
-                <element signature="e#2688#4186#0" expanded="true" />
-                <element signature="e#4179#4180#0" expanded="true" />
-                <element signature="e#4284#4494#0" expanded="true" />
-                <element signature="e#4487#4488#0" expanded="true" />
-                <element signature="e#4607#4746#0" expanded="true" />
-                <element signature="e#4739#4740#0" expanded="true" />
-                <element signature="e#4832#5003#0" expanded="true" />
-                <element signature="e#4996#4997#0" expanded="true" />
-                <element signature="e#5111#5239#0" expanded="true" />
-                <element signature="e#5232#5233#0" expanded="true" />
-                <element signature="e#5321#5458#0" expanded="true" />
-                <element signature="e#5451#5452#0" expanded="true" />
-              </folding>
+            <state line="184" column="0" selection-start="5985" selection-end="5985" vertical-scroll-proportion="0.0" vertical-offset="4209" max-vertical-offset="4577">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="CalculatorWithoutDist.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithoutDist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="26" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1012">
-              <folding>
-                <element signature="e#657#675#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SettingActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/SettingActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="63" selection-start="776" selection-end="776" vertical-scroll-proportion="0.7036329" vertical-offset="0" max-vertical-offset="3519">
+            <state line="50" column="22" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="4140">
               <folding />
             </state>
           </provider>
@@ -127,31 +103,25 @@
       <file leaf-file-name="MapGraph.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/MapGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="7" selection-start="4560" selection-end="4560" vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2346">
+            <state line="64" column="98" selection-start="2457" selection-end="2457" vertical-scroll-proportion="0.0" vertical-offset="1449" max-vertical-offset="2714">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_setting.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_setting.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="LocationCalculator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocationCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="44" selection-start="394" selection-end="394" vertical-scroll-proportion="-0.46" vertical-offset="207" max-vertical-offset="736">
+            <state line="21" column="18" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_locating.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_locating.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="LocationMessage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocationMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="469" selection-end="469" vertical-scroll-proportion="-1.84" vertical-offset="184" max-vertical-offset="1288">
+            <state line="18" column="31" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="598">
               <folding />
             </state>
           </provider>
@@ -160,59 +130,26 @@
       <file leaf-file-name="LocatingService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocatingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="218" column="5" selection-start="7588" selection-end="7588" vertical-scroll-proportion="-7.52" vertical-offset="3101" max-vertical-offset="8441">
-              <folding>
-                <element signature="docComment;method#onCreate#0;class#LocatingService#0" expanded="false" />
-                <element signature="method#onCreate#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#onStartCommand#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#onBind#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#onDestroy#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#requestForPOSInfo#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#deliverCurrentLocation#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#getLocation#0;class#LocatingBinder#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;method#setPOSInfo#0;class#LocatingBinder#0;class#LocatingService#0" expanded="false" />
-                <element signature="docComment;class#Locator#0;class#LocatingService#0" expanded="false" />
-                <element signature="e#8557#9604#0" expanded="true" />
-                <element signature="e#9597#9598#0" expanded="true" />
-                <element signature="e#12482#12513#0" expanded="true" />
-                <element signature="class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-                <element signature="method#RssiStorage#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-                <element signature="method#addNewRecord#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-                <element signature="method#switchList#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-                <element signature="method#getLastRecordList#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="-11.96" vertical-offset="0" max-vertical-offset="552">
+            <state line="51" column="33" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.0" vertical-offset="1150" max-vertical-offset="11270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculatorWithCOM.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithCOM.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="40" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="4209">
-              <folding>
-                <element signature="e#1533#1545#0" expanded="true" />
-              </folding>
+            <state line="21" column="50" selection-start="838" selection-end="838" vertical-scroll-proportion="0.5674342" vertical-offset="138" max-vertical-offset="1012">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocationCalculator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocationCalculator.java">
+      <file leaf-file-name="RssiRecord.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/RssiRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="18" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-              <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
+            <state line="19" column="13" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1564">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -227,22 +164,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/navior/test/positioning/com/navior/ips/android/LocationCalculator.java" />
         <option value="$PROJECT_DIR$/src/LocationCalculator.java" />
         <option value="$PROJECT_DIR$/src/POI.java" />
         <option value="$PROJECT_DIR$/src/com/navior/ips/android/POI.java" />
         <option value="$PROJECT_DIR$/src/com/navior/ips/android/LocationCalculator.java" />
         <option value="$PROJECT_DIR$/src/com/navior/ips/model/POI.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_locating.xml" />
         <option value="$PROJECT_DIR$/src/com/navior/ips/android/LocationMessage.java" />
-        <option value="$PROJECT_DIR$/src/com/navior/test/positioning/MapGraph.java" />
         <option value="$PROJECT_DIR$/src/com/navior/test/positioning/LocatingActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/navior/ips/android/LocatingService.java" />
         <option value="$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithCOM.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_setting.xml" />
         <option value="$PROJECT_DIR$/src/com/navior/test/positioning/SettingActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/navior/test/positioning/MapGraph.java" />
+        <option value="$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithoutDist.java" />
+        <option value="$PROJECT_DIR$/src/com/navior/ips/android/LocatingService.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -278,6 +215,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -350,6 +288,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="navior" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ips" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PositioningActivity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PositioningActivity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -392,20 +356,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Libraries" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Rssi_Stat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -556,33 +521,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1058" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.60662985" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32265192" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52154696" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39337015" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2994475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20917822" sideWeight="0.60662985" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18890075" sideWeight="0.70055246" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.60662985" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32265192" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -647,32 +612,56 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/model/Point2D.java">
+    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/DrawPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
+        <state line="14" column="13" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="368" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/model/OperatorLog.java">
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2323">
+        <state line="13" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="552">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/model/type/NameValuePair.java">
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_locating.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state line="12" column="43" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0" vertical-offset="184" max-vertical-offset="1288" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_setting.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="44" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="736" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/SettingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="3519" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/LocatingActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="37" selection-start="3375" selection-end="3375" vertical-scroll-proportion="0.0" vertical-offset="983" max-vertical-offset="3680" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/MapGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="98" selection-start="2457" selection-end="2457" vertical-scroll-proportion="0.0" vertical-offset="828" max-vertical-offset="2323">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/System.class">
+    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocationCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="139" selection-end="167" vertical-scroll-proportion="0.25330397" vertical-offset="0" max-vertical-offset="1679" />
+        <state line="21" column="18" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocationMessage.java">
@@ -682,126 +671,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/DrawPoint.java">
+    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/RssiRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="368">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocationCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocatingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="5" selection-start="7588" selection-end="7588" vertical-scroll-proportion="-7.52" vertical-offset="3101" max-vertical-offset="8441">
-          <folding>
-            <element signature="docComment;method#onCreate#0;class#LocatingService#0" expanded="false" />
-            <element signature="method#onCreate#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#onStartCommand#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#onBind#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#onDestroy#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#requestForPOSInfo#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#deliverCurrentLocation#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#getLocation#0;class#LocatingBinder#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;method#setPOSInfo#0;class#LocatingBinder#0;class#LocatingService#0" expanded="false" />
-            <element signature="docComment;class#Locator#0;class#LocatingService#0" expanded="false" />
-            <element signature="e#8557#9604#0" expanded="true" />
-            <element signature="e#9597#9598#0" expanded="true" />
-            <element signature="e#12482#12513#0" expanded="true" />
-            <element signature="class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-            <element signature="method#RssiStorage#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-            <element signature="method#addNewRecord#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-            <element signature="method#switchList#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-            <element signature="method#getLastRecordList#0;class#RssiStorage#0;class#Locator#0;class#LocatingService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/MapGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="7" selection-start="4560" selection-end="4560" vertical-scroll-proportion="0.0" vertical-offset="1512" max-vertical-offset="2346">
+        <state line="19" column="13" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithCOM.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="40" selection-start="2841" selection-end="2841" vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="4209">
-          <folding>
-            <element signature="e#1533#1545#0" expanded="true" />
-          </folding>
+        <state line="184" column="0" selection-start="5985" selection-end="5985" vertical-scroll-proportion="0.0" vertical-offset="3551" max-vertical-offset="4209">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/LocatingActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/CalculatorWithoutDist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="37" selection-start="3375" selection-end="3375" vertical-scroll-proportion="0.0" vertical-offset="983" max-vertical-offset="3680">
-          <folding>
-            <element signature="e#2688#4186#0" expanded="true" />
-            <element signature="e#4179#4180#0" expanded="true" />
-            <element signature="e#4284#4494#0" expanded="true" />
-            <element signature="e#4487#4488#0" expanded="true" />
-            <element signature="e#4607#4746#0" expanded="true" />
-            <element signature="e#4739#4740#0" expanded="true" />
-            <element signature="e#4832#5003#0" expanded="true" />
-            <element signature="e#4996#4997#0" expanded="true" />
-            <element signature="e#5111#5239#0" expanded="true" />
-            <element signature="e#5232#5233#0" expanded="true" />
-            <element signature="e#5321#5458#0" expanded="true" />
-            <element signature="e#5451#5452#0" expanded="true" />
-          </folding>
+        <state line="50" column="22" selection-start="1774" selection-end="1774" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="3887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/navior/ips/android/LocatingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="33" selection-start="1841" selection-end="1841" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="10396">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="26" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1012">
-          <folding>
-            <element signature="e#657#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="483" selection-end="483" vertical-scroll-proportion="-11.96" vertical-offset="0" max-vertical-offset="552">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_locating.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="43" selection-start="469" selection-end="469" vertical-scroll-proportion="-1.84" vertical-offset="184" max-vertical-offset="1288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_setting.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="44" selection-start="394" selection-end="394" vertical-scroll-proportion="-0.46" vertical-offset="207" max-vertical-offset="736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/navior/test/positioning/SettingActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="63" selection-start="776" selection-end="776" vertical-scroll-proportion="0.7036329" vertical-offset="0" max-vertical-offset="3519">
+        <state line="21" column="50" selection-start="838" selection-end="838" vertical-scroll-proportion="0.5674342" vertical-offset="138" max-vertical-offset="1012">
           <folding />
         </state>
       </provider>
